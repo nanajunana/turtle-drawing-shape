@@ -1,0 +1,25 @@
+from turtle import Turtle, Screen
+import random
+
+timmy = Turtle()
+timmy.shape('turtle')
+timmy.pencolor('red')
+
+
+def draw_shape(number, angle):
+    for _ in range(number):
+        timmy.forward(100)
+        timmy.right(angle)
+    timmy.pencolor(random.random(),random.random(), random.random())
+
+draw_shape(3, 120)
+draw_shape(4, 90)
+draw_shape(5, 72)
+draw_shape(6,60)
+draw_shape(7, 51.43)
+draw_shape(8, 45)
+draw_shape(9, 40)
+draw_shape(10, 36)
+
+screen = Screen()
+screen.exitonclick()
