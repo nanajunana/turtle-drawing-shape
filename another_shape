@@ -1,0 +1,23 @@
+from turtle import Turtle, Screen
+import random
+
+timmy = Turtle()
+timmy.shape('turtle')
+timmy.pencolor('black')
+timmy.speed('fastest')
+
+def get_random_color():
+    color = (random.random(), random.random(), random.random())
+    return color
+
+def drawing_circle(number, direction):
+    timmy.circle(number)
+    timmy.left(direction)
+    timmy.pencolor(get_random_color())
+
+
+for _ in range (36):
+    drawing_circle(50,10)
+
+screen = Screen()
+screen.exitonclick()
