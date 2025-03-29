@@ -1,0 +1,29 @@
+import random
+from turtle import Turtle, Screen
+
+final_list = [(229, 225, 221), (231, 206, 85), (218, 229, 219), (231, 222, 226), (224, 150, 89), (215, 224, 230), (120, 166, 185), (159, 14, 21), (34, 110, 157), (232, 82, 46), (124, 176, 144), (8, 97, 38), (171, 21, 16), (199, 65, 28), (185, 186, 27), (31, 128, 47), (12, 41, 74), (15, 63, 40), (242, 202, 5), (138, 82, 95)]
+mega_list = []
+for r, g, b in final_list:
+    normal = (r/255, g/255, b/255)
+    mega_list.append(normal)
+
+number_of_dots = 0
+tim = Turtle()
+tim.shape('turtle')
+tim.penup()
+x_position = -200
+y_position = -200
+tim.setposition((x_position,y_position))
+
+while number_of_dots <100:
+    for _ in range(10):
+        tim.dot(20, random.choice(mega_list))
+        tim.forward(50)
+    number_of_dots += 10
+    y_position += 50
+    tim.setx(x_position)
+    tim.sety(y_position)
+
+
+screen = Screen()
+screen.exitonclick()
